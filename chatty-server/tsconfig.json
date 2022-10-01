@@ -1,24 +1,65 @@
 {
-  "compilerOptions": {
-    "target": "es2015",
-    "module": "commonjs",
-    "lib": ["DOM", "ES2015"],
-    "baseUrl": ".",
-    "outDir": "./build",
-    "rootDir": "src",
-    "strict": true,
-    "noImplicitAny": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "sourceMap": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "forceConsistentCasingInFileNames": true,
-    "allowSyntheticDefaultImports": true,
-    "pretty": true,
-    "resolveJsonModule": true
-  }
+    "compilerOptions": {
+        "target": "es2015",
+        "module": "commonjs",
+        "lib": [
+            "DOM",
+            "ES2015"
+        ],
+        "baseUrl": ".",
+        "outDir": "./build",
+        "rootDir": "src",
+        "strict": true,
+        "noImplicitAny": true,
+        "noUnusedLocals": false,
+        "noUnusedParameters": false,
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "sourceMap": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "forceConsistentCasingInFileNames": true,
+        "allowSyntheticDefaultImports": true,
+        "pretty": true,
+        "resolveJsonModule": true,
+        "plugins": [
+            {
+                "transform": "typescript-transform-paths"
+            },
+            {
+                "transform": "typescript-transform-paths",
+                "afterDeclarations": true
+            }
+        ],
+        "paths": {
+            "@root/*": [
+                "src/*"
+            ],
+            "@shared/*": [
+                "src/Shared/*"
+            ],
+            "@globals/*": [
+                "src/Shared/Globals/*"
+            ],
+            "@services/*": [
+                "src/Shared/Services/*"
+            ],
+            "@workers/*": [
+                "src/Shared/Workers/*"
+            ],
+            "@sockets/*": [
+                "src/Shared/Sockets/*"
+            ],
+            "@helpers/*": [
+                "src/Shared/Globals/Helpers/*"
+            ],
+            "@features/*": [
+                "src/Features/*"
+            ],
+            "@auth/*": [
+                "src/Features/Auth/*"
+            ]
+        }
+    }
 }
 
