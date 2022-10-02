@@ -1,3 +1,4 @@
 /chatty-server/node_modules/
 /chatty-server/.env
 .idea
+/chatty-server/build
